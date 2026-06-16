@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <title>Pricing & Programmes | Al-Rushd Institute of Quranic Studies</title>
+  <meta name="description"
+    content="Transparent monthly pricing for 1-on-1 Quranic Fluency & Tajweed classes. Starting from $35/month. Free 30-minute trial included. UK, US & worldwide timings." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { ink: { 950: '#0a0c14', 900: '#0f1120' }, gold: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' }, sage: { 400: '#6ee7b7', 600: '#059669', 900: '#064e3b' } }, fontFamily: { display: ['Fraunces', 'Georgia', 'serif'], body: ['DM Sans', 'system-ui', 'sans-serif'], arabic: ['Amiri', 'serif'] } } } }</script>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: #0a0c14;
+      color: #e2e8f0;
+      overflow-x: hidden
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0a0c14
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #f59e0b;
+      border-radius: 2px
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: .4
+    }
+
+    .nav-wrap {
+      background: rgba(10, 12, 20, 0.88);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(251, 191, 36, 0.12)
+    }
+
+    .nav-link {
+      font-size: .875rem;
+      font-weight: 500;
+      color: #94a3b8;
+      padding: .375rem .875rem;
+      border-radius: .5rem;
+      transition: color .2s, background .2s;
+      text-decoration: none;
+      letter-spacing: .01em
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #fbbf24;
+      background: rgba(245, 158, 11, .07)
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .9rem 2.2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      color: #0a0c14;
+      text-decoration: none;
+      background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: all .3s;
+      box-shadow: 0 8px 28px rgba(245, 158, 11, .32)
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(245, 158, 11, .5)
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .85rem 2rem;
+      font-size: .9rem;
+      font-weight: 600;
+      color: #fbbf24;
+      text-decoration: none;
+      border: 1.5px solid rgba(251, 191, 36, .4);
+      border-radius: 4px;
+      transition: all .25s;
+      background: transparent
+    }
+
+    .btn-ghost:hover {
+      background: rgba(251, 191, 36, .08);
+      border-color: #fbbf24
+    }
+
+    .btn-sm {
+      padding: .55rem 1.4rem;
+      font-size: .825rem;
+      border-radius: 3px
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity .7s ease, transform .7s ease
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    .gold-rule {
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #fbbf24);
+      border-radius: 1px;
+      margin-bottom: 1.5rem
+    }
+
+    .footer-bg {
+      background: linear-gradient(180deg, #0a0c14, #0f1120);
+      border-top: 1px solid rgba(251, 191, 36, .1)
+    }
+    .footer-social a{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:3px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);color:#64748b;transition:color .25s,border-color .25s,background .25s;text-decoration:none;}
+    .footer-social a:hover{color:#fbbf24;border-color:rgba(251,191,36,.35);background:rgba(245,158,11,.07);}
+
+    /* Tier rows */
+    .tier-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .85rem 1rem;
+      border: 1px solid rgba(255, 255, 255, .07);
+      border-radius: 3px;
+      margin-bottom: .5rem;
+      transition: border-color .2s, background .2s
+    }
+
+    .tier-row:hover {
+      background: rgba(245, 158, 11, .04);
+      border-color: rgba(245, 158, 11, .2)
+    }
+
+    .tier-row.featured {
+      border-color: rgba(245, 158, 11, .3);
+      background: rgba(245, 158, 11, .05)
+    }
+
+    .tier-price {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fbbf24
+    }
+
+    .tier-freq {
+      font-size: .78rem;
+      color: #64748b
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid rgba(255, 255, 255, .07)
+    }
+
+    .faq-btn {
+      width: 100%;
+      text-align: left;
+      padding: 1.4rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #e2e8f0;
+      font-family: 'Fraunces', serif;
+      font-size: 1rem;
+      font-weight: 600
+    }
+
+    .faq-body {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .4s ease, padding .3s ease
+    }
+
+    .faq-body.open {
+      max-height: 300px;
+      padding-bottom: 1.2rem
+    }
+  </style>
+</head>
+
+<body>
+
+  <header role="banner">
+    <nav class="nav-wrap fixed top-0 left-0 right-0 z-50" aria-label="Main navigation">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="index.html" class="flex items-center gap-3 flex-shrink-0" aria-label="Al-Rushd Institute">
+            <div class="w-9 h-9 rounded flex items-center justify-center text-lg font-bold text-white"
+              style="background:linear-gradient(135deg,#f59e0b,#d97706);">☪</div>
+            <div>
+              <div style="font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:.95rem;line-height:1;">
+                Al-Rushd Institute</div>
+              <div style="font-size:.68rem;color:#6ee7b7;letter-spacing:.06em;font-weight:500;">OF QURANIC STUDIES</div>
+            </div>
+          </a>
+          <div class="hidden md:flex items-center gap-1">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="pricing.html" class="nav-link active" aria-current="page">Pricing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="contact.html" class="btn-primary btn-sm ml-4" style="animation:none;">Book Free Trial</a>
+          </div>
+          <button id="burger" class="md:hidden p-2 rounded hover:bg-white/10 transition-colors flex flex-col gap-1.5"
+            aria-label="Toggle menu" aria-expanded="false" aria-controls="mob-nav">
+            <span class="w-5 h-0.5 bg-white rounded transition-all duration-300" id="b1"></span>
+            <span class="w-5 h-0.5 bg-white rounded transition-all duration-300" id="b2"></span>
+            <span class="w-5 h-0.5 bg-white rounded transition-all duration-300" id="b3"></span>
+          </button>
+        </div>
+        <div id="mob-nav" class="md:hidden hidden pb-5">
+          <div class="flex flex-col gap-1 pt-3 border-t border-white/10 mt-2">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="pricing.html" class="nav-link active">Pricing</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="contact.html" class="btn-primary mt-3 justify-center" style="animation:none;">Book Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- ═══ HERO ═══ -->
+    <section class="relative pt-36 pb-16 px-5 sm:px-8 text-center overflow-hidden"
+      style="background:linear-gradient(180deg,#0f1120 0%,#0a0c14 100%);">
+      <div class="absolute inset-0 pointer-events-none"
+        style="background:radial-gradient(ellipse at 50% 0%,rgba(6,78,59,.2) 0%,transparent 65%);" aria-hidden="true">
+      </div>
+      <div class="max-w-3xl mx-auto relative z-10 reveal">
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <div style="width:32px;height:1px;background:#f59e0b;"></div>
+          <span
+            style="font-size:.75rem;font-weight:600;letter-spacing:.15em;color:#f59e0b;text-transform:uppercase;">Transparent
+            Pricing</span>
+          <div style="width:32px;height:1px;background:#f59e0b;"></div>
+        </div>
+        <h1
+          style="font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);color:#fff;line-height:1.1;margin-bottom:1.2rem;">
+          Clear, Honest <em style="color:#fbbf24;font-style:italic;">Pricing</em>
+        </h1>
+        <p style="color:#64748b;font-size:1rem;line-height:1.7;max-width:500px;margin:0 auto;">
+          No hidden fees. No long-term lock-ins. Just purposeful, one-on-one Islamic education at a fair monthly rate.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ PRICING CARDS ═══ -->
+    <section id="pricing" class="py-24 px-5 sm:px-8" style="background:#0a0c14;" aria-label="Pricing plans">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+
+          <!-- CARD 1: Tajweed — FEATURED -->
+          <article class="reveal"
+            style="transition-delay:.05s;position:relative;background:linear-gradient(160deg,rgba(6,78,59,.35),rgba(10,12,20,.98));border:1px solid rgba(245,158,11,.28);border-radius:4px;">
+            <!-- Gold top bar -->
+            <div
+              style="height:3px;background:linear-gradient(90deg,#d97706,#fbbf24,#d97706);border-radius:4px 4px 0 0;">
+            </div>
+            <!-- Most popular badge -->
+            <div style="text-align:center;padding:1rem 1rem .5rem;">
+              <span
+                style="font-size:.7rem;font-weight:700;letter-spacing:.1em;background:linear-gradient(90deg,#d97706,#fbbf24);color:#0a0c14;padding:.3rem 1rem;border-radius:2px;text-transform:uppercase;">⭐
+                Most Popular</span>
+            </div>
+            <div style="padding:1.5rem 2rem 2rem;">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem;">
+                <div style="font-size:2rem;">📖</div>
+                <span
+                  style="font-size:.72rem;font-weight:600;color:#6ee7b7;background:rgba(6,78,59,.4);border:1px solid rgba(52,211,153,.25);padding:.2rem .7rem;border-radius:2px;text-transform:uppercase;letter-spacing:.06em;">Beginner–Intermediate</span>
+              </div>
+              <h2
+                style="font-family:'Fraunces',serif;font-weight:700;font-size:1.35rem;color:#fff;margin-bottom:.3rem;">
+                Quranic Fluency &amp; Tajweed</h2>
+              <p
+                style="color:#64748b;font-size:.8rem;margin-bottom:1.5rem;letter-spacing:.04em;text-transform:uppercase;">
+                Live 1-on-1 · 30 min per session</p>
+
+              <!-- Tier Pricing -->
+              <p
+                style="font-size:.72rem;color:#475569;text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:.75rem;">
+                Choose your frequency</p>
+
+              <div class="tier-row" style="margin-bottom:.5rem;">
+                <div>
+                  <p style="font-size:.875rem;font-weight:600;color:#e2e8f0;">2 Days / Week</p>
+                  <p class="tier-freq">Starter plan</p>
+                </div>
+                <div style="text-align:right;">
+                  <span class="tier-price">£35 / $45</span>
+                  <span style="color:#475569;font-size:.8rem;font-family:'DM Sans',sans-serif;"> /mo</span>
+                </div>
+              </div>
+
+              <div class="tier-row featured" style="margin-bottom:.5rem;">
+                <div>
+                  <p style="font-size:.875rem;font-weight:700;color:#fbbf24;">3 Days / Week</p>
+                  <p class="tier-freq">Standard plan</p>
+                </div>
+                <div style="text-align:right;">
+                  <span class="tier-price">£60 / $76</span>
+                  <span style="color:#475569;font-size:.8rem;font-family:'DM Sans',sans-serif;"> /mo</span>
+                </div>
+              </div>
+
+              <div class="tier-row" style="margin-bottom:1rem;">
+                <div>
+                  <p style="font-size:.875rem;font-weight:600;color:#e2e8f0;">5 Days / Week</p>
+                  <p class="tier-freq">Intensive plan</p>
+                </div>
+                <div style="text-align:right;">
+                  <span class="tier-price">£70 / $89</span>
+                  <span style="color:#475569;font-size:.8rem;font-family:'DM Sans',sans-serif;"> /mo</span>
+                </div>
+              </div>
+              <p style="font-size:.73rem;color:#334155;margin-bottom:1.5rem;">Billed monthly · cancel anytime · no
+                registration fee</p>
+
+              <!-- Features -->
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:.65rem;margin-bottom:2rem;">
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#94a3b8;"><span
+                    style="color:#6ee7b7;font-weight:700;flex-shrink:0;">✓</span>Correct Makharij for non-native Arabic
+                  speakers</li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#94a3b8;"><span
+                    style="color:#6ee7b7;font-weight:700;flex-shrink:0;">✓</span>Self-paced progression for kids &amp;
+                  adults</li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#94a3b8;"><span
+                    style="color:#6ee7b7;font-weight:700;flex-shrink:0;">✓</span>All Tajweed rules explained in clear
+                  English</li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#94a3b8;"><span
+                    style="color:#6ee7b7;font-weight:700;flex-shrink:0;">✓</span>Sifaat &amp; Madd rules covered
+                  progressively</li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#94a3b8;"><span
+                    style="color:#6ee7b7;font-weight:700;flex-shrink:0;">✓</span>Hifz foundations with cognitive
+                  retention</li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#94a3b8;"><span
+                    style="color:#6ee7b7;font-weight:700;flex-shrink:0;">✓</span>Regular formative assessment &amp;
+                  feedback</li>
+              </ul>
+              <a href="contact.html" class="btn-primary" style="width:100%;justify-content:center;"
+                aria-label="Start free trial for Quranic Fluency">Start Free Trial →</a>
+            </div>
+          </article>
+
+          <!-- CARD 2: Fahm-ul-Quran -->
+          <article class="reveal"
+            style="transition-delay:.1s;background:linear-gradient(160deg,rgba(10,17,40,.9),rgba(6,78,59,.08));border:1px solid rgba(255,255,255,.08);border-radius:4px;">
+            <div
+              style="height:3px;background:linear-gradient(90deg,rgba(245,158,11,.2),rgba(245,158,11,.4),rgba(245,158,11,.2));border-radius:4px 4px 0 0;">
+            </div>
+            <div style="padding:2rem 2rem;">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem;">
+                <div style="font-size:2rem;">💡</div>
+                <span
+                  style="font-size:.72rem;font-weight:600;color:#64748b;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:.2rem .7rem;border-radius:2px;text-transform:uppercase;letter-spacing:.06em;">All
+                  Levels</span>
+              </div>
+              <h2
+                style="font-family:'Fraunces',serif;font-weight:700;font-size:1.35rem;color:#fff;margin-bottom:.3rem;">
+                Fahm-ul-Quran</h2>
+              <p
+                style="color:#64748b;font-size:.8rem;margin-bottom:2rem;text-transform:uppercase;letter-spacing:.04em;">
+                Understanding the Divine Message</p>
+
+              <div
+                style="text-align:center;padding:1.5rem;border:1px dashed rgba(245,158,11,.25);border-radius:3px;margin-bottom:1.5rem;">
+                <div class="font-arabic text-2xl text-gold-400 opacity-60 mb-2">قريباً</div>
+                <span
+                  style="font-size:.82rem;color:#f59e0b;font-weight:600;letter-spacing:.06em;text-transform:uppercase;">⏳
+                  Coming Soon</span>
+                <p style="color:#334155;font-size:.75rem;margin-top:.5rem;">Join the waiting list to be notified first
+                </p>
+              </div>
+
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:.65rem;margin-bottom:2rem;">
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#64748b;"><span
+                    style="color:#f59e0b;opacity:.6;flex-shrink:0;">✦</span>Word-by-word translation with context</li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#64748b;"><span
+                    style="color:#f59e0b;opacity:.6;flex-shrink:0;">✦</span>Thematic Tafsir &amp; Surah overview
+                  sessions</li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#64748b;"><span
+                    style="color:#f59e0b;opacity:.6;flex-shrink:0;">✦</span>Logical, modern explanation of meanings</li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#64748b;"><span
+                    style="color:#f59e0b;opacity:.6;flex-shrink:0;">✦</span>Connecting lessons to everyday Muslim life
+                </li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#64748b;"><span
+                    style="color:#f59e0b;opacity:.6;flex-shrink:0;">✦</span>Custom reading plan for your level</li>
+              </ul>
+              <a href="contact.html" class="btn-ghost" style="width:100%;justify-content:center;">Join Waiting List</a>
+            </div>
+          </article>
+
+          <!-- CARD 3: Islamic Essentials -->
+          <article class="reveal"
+            style="transition-delay:.15s;background:linear-gradient(160deg,rgba(15,31,74,.55),rgba(10,12,20,.95));border:1px solid rgba(99,102,241,.15);border-radius:4px;">
+            <div
+              style="height:3px;background:linear-gradient(90deg,rgba(99,102,241,.3),rgba(129,140,248,.5),rgba(99,102,241,.3));border-radius:4px 4px 0 0;">
+            </div>
+            <div style="padding:2rem 2rem;">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem;">
+                <div style="font-size:2rem;">🌙</div>
+                <span
+                  style="font-size:.72rem;font-weight:600;color:#818cf8;background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.2);padding:.2rem .7rem;border-radius:2px;text-transform:uppercase;letter-spacing:.06em;">All
+                  Levels</span>
+              </div>
+              <h2
+                style="font-family:'Fraunces',serif;font-weight:700;font-size:1.35rem;color:#fff;margin-bottom:.3rem;">
+                Islamic Essentials &amp; Fiqh</h2>
+              <p
+                style="color:#64748b;font-size:.8rem;margin-bottom:2rem;text-transform:uppercase;letter-spacing:.04em;">
+                Faith &amp; Practice for Western Life</p>
+
+              <div
+                style="text-align:center;padding:1.5rem;border:1px dashed rgba(99,102,241,.3);border-radius:3px;margin-bottom:1.5rem;">
+                <div class="font-arabic text-2xl opacity-40 mb-2" style="color:#818cf8;">قريباً</div>
+                <span
+                  style="font-size:.82rem;color:#818cf8;font-weight:600;letter-spacing:.06em;text-transform:uppercase;">⏳
+                  Coming Soon</span>
+                <p style="color:#1e293b;font-size:.75rem;margin-top:.5rem;">Join the waiting list to be notified first
+                </p>
+              </div>
+
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:.65rem;margin-bottom:2rem;">
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#64748b;"><span
+                    style="color:#818cf8;opacity:.7;flex-shrink:0;">✦</span>Practical Fiqh for the West (Salah, Wudu,
+                  fasting)</li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#64748b;"><span
+                    style="color:#818cf8;opacity:.7;flex-shrink:0;">✦</span>Clear Aqeedah foundations</li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#64748b;"><span
+                    style="color:#818cf8;opacity:.7;flex-shrink:0;">✦</span>Prophetic character development (Seerah)
+                </li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#64748b;"><span
+                    style="color:#818cf8;opacity:.7;flex-shrink:0;">✦</span>Muslim identity &amp; wellbeing in Western
+                  life</li>
+                <li style="display:flex;gap:.7rem;align-items:flex-start;font-size:.875rem;color:#64748b;"><span
+                    style="color:#818cf8;opacity:.7;flex-shrink:0;">✦</span>Customised to student's age &amp; context
+                </li>
+              </ul>
+              <a href="contact.html" class="btn-ghost"
+                style="width:100%;justify-content:center;border-color:rgba(99,102,241,.4);color:#818cf8;">Join Waiting
+                List</a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="text-center reveal" style="color:#334155;font-size:.82rem;margin-top:2rem;transition-delay:.2s;">
+          All programmes · one-on-one live sessions · English-medium instruction · cancel anytime · no registration fee
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ WHAT'S INCLUDED ═══ -->
+    <section class="py-20 px-5 sm:px-8" style="background:linear-gradient(180deg,#0a0c14,#0d1a0f);"
+      aria-label="What's included">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <div class="gold-rule mx-auto"></div>
+          <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:#fff;">
+            Every Plan Includes
+          </h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="reveal"
+            style="transition-delay:.05s;padding:1.5rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:3px;">
+            <span style="font-size:1.5rem;display:block;margin-bottom:.75rem;">🎯</span>
+            <h3 style="font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:1rem;margin-bottom:.5rem;">Free
+              Trial Session</h3>
+            <p style="color:#64748b;font-size:.83rem;line-height:1.6;">First 30-minute class is entirely free with no
+              obligation to continue.</p>
+          </div>
+          <div class="reveal"
+            style="transition-delay:.08s;padding:1.5rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:3px;">
+            <span style="font-size:1.5rem;display:block;margin-bottom:.75rem;">👤</span>
+            <h3 style="font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:1rem;margin-bottom:.5rem;">
+              1-on-1 Private Sessions</h3>
+            <p style="color:#64748b;font-size:.83rem;line-height:1.6;">Undivided teacher attention in every class. No
+              group dilution.</p>
+          </div>
+          <div class="reveal"
+            style="transition-delay:.11s;padding:1.5rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:3px;">
+            <span style="font-size:1.5rem;display:block;margin-bottom:.75rem;">🌍</span>
+            <h3 style="font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:1rem;margin-bottom:.5rem;">
+              Western Timezone Scheduling</h3>
+            <p style="color:#64748b;font-size:.83rem;line-height:1.6;">Mornings, evenings, and weekends across GMT, EST,
+              and AEST.</p>
+          </div>
+          <div class="reveal"
+            style="transition-delay:.14s;padding:1.5rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:3px;">
+            <span style="font-size:1.5rem;display:block;margin-bottom:.75rem;">📊</span>
+            <h3 style="font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:1rem;margin-bottom:.5rem;">
+              Progress Tracking</h3>
+            <p style="color:#64748b;font-size:.83rem;line-height:1.6;">Regular formative assessment with clear feedback
+              after every milestone.</p>
+          </div>
+          <div class="reveal"
+            style="transition-delay:.17s;padding:1.5rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:3px;">
+            <span style="font-size:1.5rem;display:block;margin-bottom:.75rem;">🇬🇧</span>
+            <h3 style="font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:1rem;margin-bottom:.5rem;">
+              English-Medium Instruction</h3>
+            <p style="color:#64748b;font-size:.83rem;line-height:1.6;">All concepts explained clearly in English. No
+              language barrier.</p>
+          </div>
+          <div class="reveal"
+            style="transition-delay:.2s;padding:1.5rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:3px;">
+            <span style="font-size:1.5rem;display:block;margin-bottom:.75rem;">✏️</span>
+            <h3 style="font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:1rem;margin-bottom:.5rem;">
+              Personalised Curriculum</h3>
+            <p style="color:#64748b;font-size:.83rem;line-height:1.6;">Built around your level, your goals, and your
+              available time — not a template.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="py-20 px-5 sm:px-8" style="background:#0a0c14;" aria-label="Frequently asked questions">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <div class="gold-rule mx-auto"></div>
+          <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:#fff;">Common
+            Questions</h2>
+        </div>
+
+        <div class="reveal" style="transition-delay:.05s;">
+
+          <div class="faq-item">
+            <button class="faq-btn" id="faq1-btn" aria-expanded="false" aria-controls="faq1"
+              onclick="toggleFaq('faq1')">
+              <span>How does the free trial work?</span>
+              <span id="faq1-icon" style="color:#f59e0b;font-size:1.2rem;transition:transform .3s;">+</span>
+            </button>
+            <div class="faq-body" id="faq1" role="region" aria-labelledby="faq1-btn">
+              <p style="color:#64748b;font-size:.9rem;line-height:1.75;">Simply fill out the registration form or
+                message us on WhatsApp. We'll schedule a free 30-minute session at a time that suits you. During the
+                trial we'll assess your current level, discuss your learning goals, and recommend the most suitable
+                programme. There is absolutely no obligation to continue — and no payment details required.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" id="faq2-btn" aria-expanded="false" aria-controls="faq2"
+              onclick="toggleFaq('faq2')">
+              <span>What platform are classes held on?</span>
+              <span id="faq2-icon" style="color:#f59e0b;font-size:1.2rem;transition:transform .3s;">+</span>
+            </button>
+            <div class="faq-body" id="faq2" role="region" aria-labelledby="faq2-btn">
+              <p style="color:#64748b;font-size:.9rem;line-height:1.75;">Classes are conducted via video call —
+                typically Google Meet or Zoom, based on student preference. All you need is a stable internet connection
+                and a device with a camera and microphone. No software installation is required; just click the link we
+                send before each session.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" id="faq3-btn" aria-expanded="false" aria-controls="faq3"
+              onclick="toggleFaq('faq3')">
+              <span>Is this suitable for complete beginners?</span>
+              <span id="faq3-icon" style="color:#f59e0b;font-size:1.2rem;transition:transform .3s;">+</span>
+            </button>
+            <div class="faq-body" id="faq3" role="region" aria-labelledby="faq3-btn">
+              <p style="color:#64748b;font-size:.9rem;line-height:1.75;">Yes — absolutely. Whether your child has never
+                opened a Quran or you are an adult who wants to start from the Arabic alphabet, we begin from your exact
+                starting point. The curriculum is fully personalised, so beginners receive the same quality of attention
+                and progression as intermediate students.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" id="faq4-btn" aria-expanded="false" aria-controls="faq4"
+              onclick="toggleFaq('faq4')">
+              <span>Can I change my plan or cancel?</span>
+              <span id="faq4-icon" style="color:#f59e0b;font-size:1.2rem;transition:transform .3s;">+</span>
+            </button>
+            <div class="faq-body" id="faq4" role="region" aria-labelledby="faq4-btn">
+              <p style="color:#64748b;font-size:.9rem;line-height:1.75;">Yes — with no penalty. You can upgrade,
+                downgrade, or cancel your plan at any time by contacting us via WhatsApp or email. We operate on a
+                monthly billing basis, so changes take effect from the following month. There are no cancellation fees
+                and no minimum commitment.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" style="border-bottom:none;">
+            <button class="faq-btn" id="faq5-btn" aria-expanded="false" aria-controls="faq5"
+              onclick="toggleFaq('faq5')">
+              <span>What age groups do you teach?</span>
+              <span id="faq5-icon" style="color:#f59e0b;font-size:1.2rem;transition:transform .3s;">+</span>
+            </button>
+            <div class="faq-body" id="faq5" role="region" aria-labelledby="faq5-btn">
+              <p style="color:#64748b;font-size:.9rem;line-height:1.75;">We teach students of all ages — from young
+                children aged 5 and above to adults of any age. Our teaching methods are adapted to the learner's age,
+                attention span, and developmental stage. Parents can also join sessions for younger children if needed.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ BOTTOM CTA ═══ -->
+    <section class="py-20 px-5 sm:px-8" style="background:linear-gradient(135deg,#0d1a0f,#0a0c14);"
+      aria-label="Book trial">
+      <div class="max-w-3xl mx-auto text-center reveal">
+        <div
+          style="border:1px solid rgba(245,158,11,.2);border-radius:4px;padding:3.5rem 2.5rem;background:linear-gradient(145deg,rgba(6,78,59,.15),rgba(15,31,74,.2));">
+          <h2
+            style="font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:#fff;margin-bottom:1rem;">
+            Try Before You <em style="color:#fbbf24;font-style:italic;">Commit</em>
+          </h2>
+          <p
+            style="color:#64748b;font-size:.95rem;line-height:1.7;margin-bottom:2rem;max-width:460px;margin-left:auto;margin-right:auto;">
+            Your first class is free. No payment required, no obligation. Book a 30-minute session and experience the
+            Al-Rushd approach yourself.
+          </p>
+          <a href="contact.html" class="btn-primary">📅 Book Free Trial Class</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer-bg pt-16 pb-8 px-5 sm:px-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <a href="index.html" class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded flex items-center justify-center text-lg font-bold text-white"
+              style="background:linear-gradient(135deg,#f59e0b,#d97706);">☪</div>
+            <div>
+              <div style="font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:.95rem;">Al-Rushd Institute
+              </div>
+              <div style="font-size:.65rem;color:#6ee7b7;letter-spacing:.07em;font-weight:500;">OF QURANIC STUDIES</div>
+            </div>
+          </a>
+          <p style="color:#475569;font-size:.85rem;line-height:1.7;">Research-backed online Islamic education for
+            Muslims worldwide.</p>
+          <div class="footer-social" style="display:flex;gap:.75rem;margin-top:1.25rem;">
+            <a href="https://instagram.com/alrushdonline" target="_blank" rel="noopener noreferrer" aria-label="Al-Rushd on Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com/alrushdinstitute" target="_blank" rel="noopener noreferrer" aria-label="Al-Rushd on Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@alrushdinstitute" target="_blank" rel="noopener noreferrer" aria-label="Al-Rushd on TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:1rem;margin-bottom:1.2rem;">
+            Navigation</h3>
+          <nav aria-label="Footer navigation">
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:.7rem;">
+              <li><a href="index.html" style="color:#475569;font-size:.875rem;text-decoration:none;"
+                  onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='#475569'">→ Home</a></li>
+              <li><a href="about.html" style="color:#475569;font-size:.875rem;text-decoration:none;"
+                  onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='#475569'">→ About Us</a></li>
+              <li><a href="pricing.html" style="color:#475569;font-size:.875rem;text-decoration:none;"
+                  onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='#475569'">→ Pricing</a></li>
+              <li><a href="contact.html" style="color:#475569;font-size:.875rem;text-decoration:none;"
+                  onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='#475569'">→ Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:1rem;margin-bottom:1.2rem;">Get
+            in Touch</h3>
+          <address style="font-style:normal;display:flex;flex-direction:column;gap:.9rem;">
+            <a href="https://wa.me/923494148001" target="_blank" rel="noopener noreferrer"
+              style="display:flex;align-items:center;gap:.75rem;text-decoration:none;">
+              <div
+                style="width:32px;height:32px;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.25);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="13" height="13" fill="#25D366" viewBox="0 0 24 24">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg></div>
+              <span style="color:#64748b;font-size:.875rem;">+92 349 414 8001</span>
+            </a>
+            <a href="mailto:alrushdwalhidyah@gmail.com"
+              style="display:flex;align-items:center;gap:.75rem;text-decoration:none;">
+              <div
+                style="width:32px;height:32px;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.2);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg></div>
+              <span style="color:#64748b;font-size:.875rem;word-break:break-all;">alrushdwalhidyah@gmail.com</span>
+            </a>
+          </address>
+        </div>
+      </div>
+      <div
+        style="border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem;">
+        <p style="color:#334155;font-size:.8rem;">© <span id="yr"></span> Al-Rushd Institute of Quranic Studies. All
+          rights reserved.</p>
+        <p style="color:#1e293b;font-size:.75rem;">Designed for Muslim learners worldwide ❤</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/923494148001" target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+    style="background:#25D366;box-shadow:0 6px 24px rgba(37,211,102,.5);" aria-label="Chat on WhatsApp">
+    <svg width="26" height="26" fill="white" viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    const burger = document.getElementById('burger'), mobNav = document.getElementById('mob-nav');
+    const b1 = document.getElementById('b1'), b2 = document.getElementById('b2'), b3 = document.getElementById('b3');
+    let open = false;
+    burger.addEventListener('click', () => { open = !open; mobNav.classList.toggle('hidden', !open); burger.setAttribute('aria-expanded', open); b1.style.transform = open ? 'rotate(45deg) translate(5px,5px)' : ''; b2.style.opacity = open ? '0' : '1'; b3.style.transform = open ? 'rotate(-45deg) translate(5px,-5px)' : ''; });
+    mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { open = false; mobNav.classList.add('hidden'); burger.setAttribute('aria-expanded', 'false'); b1.style.transform = ''; b2.style.opacity = '1'; b3.style.transform = ''; }));
+    const obs = new IntersectionObserver(e => { e.forEach(el => { if (el.isIntersecting) { el.target.classList.add('in'); obs.unobserve(el.target); } }); }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    function toggleFaq(id) {
+      const body = document.getElementById(id);
+      const icon = document.getElementById(id + '-icon');
+      const btn = document.getElementById(id + '-btn');
+      const isOpen = body.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-body').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('[id$="-icon"]').forEach(i => { i.textContent = '+'; i.style.transform = ''; });
+      document.querySelectorAll('[id$="-btn"]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      if (!isOpen) { body.classList.add('open'); icon.textContent = '−'; icon.style.transform = 'rotate(180deg)'; btn.setAttribute('aria-expanded', 'true'); }
+    }
+  </script>
+</body>
+
+</html>

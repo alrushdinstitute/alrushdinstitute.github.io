@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <title>Contact & Book Free Trial | Al-Rushd Institute of Quranic Studies</title>
+  <meta name="description" content="Contact Al-Rushd Institute via WhatsApp or email, or complete our registration form to book your complimentary 30-minute trial class. No payment required." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{ink:{950:'#0a0c14',900:'#0f1120'},gold:{400:'#fbbf24',500:'#f59e0b',600:'#d97706'},sage:{400:'#6ee7b7',600:'#059669',900:'#064e3b'}},fontFamily:{display:['Fraunces','Georgia','serif'],body:['DM Sans','system-ui','sans-serif'],arabic:['Amiri','serif']}}}}</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',system-ui,sans-serif;background:#0a0c14;color:#e2e8f0;overflow-x:hidden}
+    ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:#0a0c14}::-webkit-scrollbar-thumb{background:#f59e0b;border-radius:2px}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.4}
+    .nav-wrap{background:rgba(10,12,20,0.88);backdrop-filter:blur(24px);border-bottom:1px solid rgba(251,191,36,0.12)}
+    .nav-link{font-size:.875rem;font-weight:500;color:#94a3b8;padding:.375rem .875rem;border-radius:.5rem;transition:color .2s,background .2s;text-decoration:none;letter-spacing:.01em}
+    .nav-link:hover,.nav-link.active{color:#fbbf24;background:rgba(245,158,11,.07)}
+    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2.2rem;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.02em;color:#0a0c14;text-decoration:none;background:linear-gradient(135deg,#fbbf24,#f59e0b,#d97706);border-radius:4px;border:none;cursor:pointer;transition:all .3s;box-shadow:0 8px 28px rgba(245,158,11,.32)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(245,158,11,.5)}
+    .btn-sm{padding:.55rem 1.4rem;font-size:.825rem;border-radius:3px}
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:translateY(0)}
+    .reveal-left{opacity:0;transform:translateX(-32px);transition:opacity .7s ease,transform .7s ease}.reveal-left.in{opacity:1;transform:translateX(0)}
+    .reveal-right{opacity:0;transform:translateX(32px);transition:opacity .7s ease,transform .7s ease}.reveal-right.in{opacity:1;transform:translateX(0)}
+    .gold-rule{width:48px;height:2px;background:linear-gradient(90deg,#f59e0b,#fbbf24);border-radius:1px;margin-bottom:1.5rem}
+    .footer-bg{background:linear-gradient(180deg,#0a0c14,#0f1120);border-top:1px solid rgba(251,191,36,.1)}
+    .footer-social a{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:3px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);color:#64748b;transition:color .25s,border-color .25s,background .25s;text-decoration:none;}
+    .footer-social a:hover{color:#fbbf24;border-color:rgba(251,191,36,.35);background:rgba(245,158,11,.07);}
+    .contact-social-icon{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:3px;transition:color .25s,border-color .25s,background .25s;text-decoration:none;flex-shrink:0;}
+    .contact-social-icon:hover{border-color:rgba(251,191,36,.5)!important;background:rgba(245,158,11,.1)!important;color:#fbbf24!important;}
+
+    /* Form */
+    .form-field{width:100%;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:.85rem 1.1rem;color:#e2e8f0;font-family:'DM Sans',sans-serif;font-size:.9rem;transition:border-color .2s,background .2s;outline:none;appearance:none;-webkit-appearance:none}
+    .form-field::placeholder{color:#475569}
+    .form-field:focus{border-color:rgba(245,158,11,.5);background:rgba(245,158,11,.03)}
+    .form-label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#64748b;margin-bottom:.5rem}
+    .contact-node{padding:1.5rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:3px;transition:border-color .2s}
+    .contact-node:hover{border-color:rgba(245,158,11,.18)}
+    select.form-field option { background-color: #0f1120; color: #e2e8f0; }
+  </style>
+</head>
+<body>
+
+<header role="banner">
+  <nav class="nav-wrap fixed top-0 left-0 right-0 z-50" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3 flex-shrink-0" aria-label="Al-Rushd Institute">
+          <div class="w-9 h-9 rounded flex items-center justify-center text-lg font-bold text-white" style="background:linear-gradient(135deg,#f59e0b,#d97706);">☪</div>
+          <div>
+            <div style="font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:.95rem;line-height:1;">Al-Rushd Institute</div>
+            <div style="font-size:.68rem;color:#6ee7b7;letter-spacing:.06em;font-weight:500;">OF QURANIC STUDIES</div>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="index.html"   class="nav-link">Home</a>
+          <a href="about.html"   class="nav-link">About Us</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
+          <a href="contact.html" class="btn-primary btn-sm ml-4" style="animation:none;">Book Free Trial</a>
+        </div>
+        <button id="burger" class="md:hidden p-2 rounded hover:bg-white/10 transition-colors flex flex-col gap-1.5" aria-label="Toggle menu" aria-expanded="false" aria-controls="mob-nav">
+          <span class="w-5 h-0.5 bg-white rounded transition-all duration-300" id="b1"></span>
+          <span class="w-5 h-0.5 bg-white rounded transition-all duration-300" id="b2"></span>
+          <span class="w-5 h-0.5 bg-white rounded transition-all duration-300" id="b3"></span>
+        </button>
+      </div>
+      <div id="mob-nav" class="md:hidden hidden pb-5">
+        <div class="flex flex-col gap-1 pt-3 border-t border-white/10 mt-2">
+          <a href="index.html"   class="nav-link">Home</a>
+          <a href="about.html"   class="nav-link">About Us</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="contact.html" class="nav-link active">Contact</a>
+          <a href="contact.html" class="btn-primary mt-3 justify-center" style="animation:none;">Book Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content" role="main">
+
+<!-- ═══ HERO ═══ -->
+<section class="relative pt-36 pb-16 px-5 sm:px-8 overflow-hidden"
+         style="background:linear-gradient(180deg,#0f1120 0%,#0a0c14 100%);">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 30% 0%,rgba(6,78,59,.18) 0%,transparent 60%);" aria-hidden="true"></div>
+  <div class="max-w-4xl mx-auto relative z-10 reveal">
+    <div class="flex items-center gap-3 mb-6">
+      <div style="width:32px;height:1px;background:#f59e0b;"></div>
+      <span style="font-size:.75rem;font-weight:600;letter-spacing:.15em;color:#f59e0b;text-transform:uppercase;">Contact Us</span>
+    </div>
+    <h1 style="font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);color:#fff;line-height:1.08;margin-bottom:1.2rem;">
+      Let's Begin Your<br/><em style="color:#fbbf24;font-style:italic;">Quranic Journey</em>
+    </h1>
+    <p style="color:#64748b;font-size:1rem;line-height:1.75;max-width:520px;">
+      Reach out via WhatsApp, email, or complete the registration form below. We respond within 24 hours and your first session is always free.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ MAIN CONTACT SECTION ═══ -->
+<section class="py-20 px-5 sm:px-8" style="background:#0a0c14;" aria-label="Contact and registration form">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-5 gap-16">
+
+      <!-- LEFT: Contact details -->
+      <div class="lg:col-span-2 reveal-left">
+
+        <!-- WhatsApp -->
+        <div class="contact-node mb-4">
+          <a href="https://wa.me/923494148001" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 no-underline" aria-label="WhatsApp Al-Rushd Institute">
+            <div style="width:52px;height:52px;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.3);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="24" height="24" fill="#25D366" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div>
+              <p style="font-size:.72rem;color:#475569;text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:.25rem;">WhatsApp</p>
+              <p style="color:#e2e8f0;font-weight:600;font-size:1rem;margin-bottom:.2rem;">+92 349 414 8001</p>
+              <p style="color:#475569;font-size:.8rem;">Fastest response · usually within 2 hours</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Email -->
+        <div class="contact-node mb-4">
+          <a href="mailto:alrushdwalhidyah@gmail.com" class="flex items-start gap-4 no-underline" aria-label="Email Al-Rushd Institute">
+            <div style="width:52px;height:52px;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.25);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p style="font-size:.72rem;color:#475569;text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:.25rem;">Email</p>
+              <p style="color:#e2e8f0;font-weight:600;font-size:.95rem;margin-bottom:.2rem;word-break:break-all;">alrushdwalhidyah@gmail.com</p>
+              <p style="color:#475569;font-size:.8rem;">We aim to respond within 24 hours</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Availability -->
+        <div class="contact-node mb-6">
+          <div class="flex items-start gap-4">
+            <div style="width:52px;height:52px;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.25);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#818cf8" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <p style="font-size:.72rem;color:#475569;text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:.25rem;">Session Availability</p>
+              <p style="color:#e2e8f0;font-weight:600;font-size:.95rem;margin-bottom:.4rem;">GMT · EST · AEST</p>
+              <p style="color:#475569;font-size:.8rem;margin-bottom:.75rem;">7 days/week · mornings, evenings &amp; weekends</p>
+              <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+                <span style="font-size:.72rem;background:rgba(99,102,241,.1);color:#818cf8;padding:.2rem .65rem;border-radius:2px;border:1px solid rgba(99,102,241,.25);">🇬🇧 UK</span>
+                <span style="font-size:.72rem;background:rgba(99,102,241,.1);color:#818cf8;padding:.2rem .65rem;border-radius:2px;border:1px solid rgba(99,102,241,.25);">🇺🇸 US</span>
+                <span style="font-size:.72rem;background:rgba(99,102,241,.1);color:#818cf8;padding:.2rem .65rem;border-radius:2px;border:1px solid rgba(99,102,241,.25);">🇦🇺 AUS</span>
+                <span style="font-size:.72rem;background:rgba(99,102,241,.1);color:#818cf8;padding:.2rem .65rem;border-radius:2px;border:1px solid rgba(99,102,241,.25);">🇨🇦 Canada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="contact-node mb-6">
+          <p style="font-size:.72rem;color:#475569;text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:.9rem;">Join through social media</p>
+          <div style="display:flex;gap:.75rem;">
+            <a href="https://instagram.com/alrushdonline" target="_blank" rel="noopener noreferrer"
+               class="contact-social-icon"
+               style="background:rgba(225,48,108,.08);border:1px solid rgba(225,48,108,.25);color:#e1306c;"
+               aria-label="Follow on Instagram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com/alrushdinstitute" target="_blank" rel="noopener noreferrer"
+               class="contact-social-icon"
+               style="background:rgba(24,119,242,.08);border:1px solid rgba(24,119,242,.25);color:#1877f2;"
+               aria-label="Follow on Facebook">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@alrushdinstitute" target="_blank" rel="noopener noreferrer"
+               class="contact-social-icon"
+               style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);color:#e2e8f0;"
+               aria-label="Follow on TikTok">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- What to expect -->
+        <div style="padding:1.5rem;background:rgba(245,158,11,.04);border:1px solid rgba(245,158,11,.18);border-radius:3px;">
+          <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:.95rem;color:#fbbf24;margin-bottom:1rem;">📋 What to Expect in Your Trial</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.75rem;">
+            <li style="display:flex;align-items:flex-start;gap:.6rem;color:#64748b;font-size:.85rem;"><span style="color:#6ee7b7;font-weight:700;flex-shrink:0;margin-top:.1rem;">✓</span>30 minutes · no payment required</li>
+            <li style="display:flex;align-items:flex-start;gap:.6rem;color:#64748b;font-size:.85rem;"><span style="color:#6ee7b7;font-weight:700;flex-shrink:0;margin-top:.1rem;">✓</span>Supportive level assessment</li>
+            <li style="display:flex;align-items:flex-start;gap:.6rem;color:#64748b;font-size:.85rem;"><span style="color:#6ee7b7;font-weight:700;flex-shrink:0;margin-top:.1rem;">✓</span>Your learning goals fully discussed</li>
+            <li style="display:flex;align-items:flex-start;gap:.6rem;color:#64748b;font-size:.85rem;"><span style="color:#6ee7b7;font-weight:700;flex-shrink:0;margin-top:.1rem;">✓</span>Recommended programme explained</li>
+            <li style="display:flex;align-items:flex-start;gap:.6rem;color:#64748b;font-size:.85rem;"><span style="color:#6ee7b7;font-weight:700;flex-shrink:0;margin-top:.1rem;">✓</span>No obligation to enrol afterwards</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="lg:col-span-3 reveal-right" style="transition-delay:.1s;">
+        <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:2.5rem;">
+
+          <h2 style="font-family:'Fraunces',serif;font-weight:700;font-size:1.6rem;color:#fff;margin-bottom:.4rem;">Request a Free Trial Class</h2>
+          <p style="color:#475569;font-size:.875rem;margin-bottom:2rem;line-height:1.6;">Complete the form below. Our academic team will confirm your session within 24 hours.</p>
+
+          <!-- Success banner (hidden by default) -->
+          <div data-fs-success class="hidden" style="margin-bottom:1.5rem;padding:1.5rem;background:rgba(4,120,87,.12);border:1px solid rgba(52,211,153,.25);border-radius:3px;text-align:center;" role="alert" aria-live="polite">
+            <div style="font-size:2rem;margin-bottom:.5rem;">✉</div>
+            <h3 style="font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:1.15rem;margin-bottom:.4rem;">Application Sent Successfully!</h3>
+            <p style="color:#6ee7b7;font-size:.875rem;">Thank you for registering. Please check your inbox — our team will be in touch within 24 hours.</p>
+          </div>
+
+          <!-- Error banner -->
+          <div data-fs-error class="hidden" style="margin-bottom:1.5rem;padding:1rem;background:rgba(127,29,29,.2);border:1px solid rgba(239,68,68,.25);border-radius:3px;color:#f87171;font-size:.875rem;text-align:center;" role="alert" aria-live="polite"></div>
+
+          <form id="academy-booking-form" style="display:flex;flex-direction:column;gap:1.2rem;">
+
+            <div>
+              <label for="f-name" class="form-label">Parent / Guardian Name <span style="color:#fbbf24;">*</span></label>
+              <input id="f-name" name="name" type="text" required data-fs-field class="form-field" placeholder="e.g. Sarah Ahmed" autocomplete="name" />
+              <span data-fs-error="name" style="font-size:.75rem;color:#f87171;margin-top:.35rem;display:block;"></span>
+            </div>
+
+            <div>
+              <label for="f-email" class="form-label">Email Address <span style="color:#fbbf24;">*</span></label>
+              <input id="f-email" name="email" type="email" required data-fs-field class="form-field" placeholder="you@example.com" autocomplete="email" />
+              <span data-fs-error="email" style="font-size:.75rem;color:#f87171;margin-top:.35rem;display:block;"></span>
+            </div>
+
+            <div>
+              <label for="f-whatsapp" class="form-label">WhatsApp Number <span style="color:#475569;font-weight:400;text-transform:none;letter-spacing:0;font-size:.78rem;">(optional)</span></label>
+              <input id="f-whatsapp" name="whatsapp" type="tel" data-fs-field class="form-field" placeholder="+44 7700 000 000" autocomplete="tel" />
+              <span data-fs-error="whatsapp" style="font-size:.75rem;color:#f87171;margin-top:.35rem;display:block;"></span>
+            </div>
+
+            <div>
+              <label for="f-goals" class="form-label">Learning Goal <span style="color:#fbbf24;">*</span></label>
+              <select id="f-goals" name="goals" required data-fs-field class="form-field" style="cursor:pointer;">
+                <option value="" disabled selected>Select the primary goal…</option>
+                <option value="Quranic Fluency &amp; Tajweed">Quranic Fluency &amp; Tajweed</option>
+                <option value="Hifz (Memorisation)">Hifz — Quran Memorisation</option>
+                <option value="General Islamic Studies">General Islamic Studies</option>
+                <option value="Fahm-ul-Quran (Join Waiting List)">Fahm-ul-Quran (Join Waiting List)</option>
+                <option value="Islamic Essentials &amp; Fiqh (Join Waiting List)">Islamic Essentials &amp; Fiqh (Join Waiting List)</option>
+                <option value="Not sure yet">Not sure yet — need guidance</option>
+              </select>
+              <span data-fs-error="goals" style="font-size:.75rem;color:#f87171;margin-top:.35rem;display:block;"></span>
+            </div>
+
+            <button type="submit" id="submit-btn" data-fs-submit-btn
+                    style="width:100%;padding:1.1rem;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.02em;color:#0a0c14;background:linear-gradient(135deg,#fbbf24,#f59e0b,#d97706);border:none;border-radius:3px;cursor:pointer;transition:all .3s;box-shadow:0 8px 24px rgba(245,158,11,.3);disabled:opacity-50;"
+                    onmouseover="if(!this.disabled)this.style.boxShadow='0 12px 36px rgba(245,158,11,.5)'" onmouseout="this.style.boxShadow='0 8px 24px rgba(245,158,11,.3)'">
+              ✉ Send Enquiry
+            </button>
+
+            <p style="text-align:center;color:#334155;font-size:.75rem;">We reply within 24 hours. Your information is handled with full confidentiality.</p>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer-bg pt-16 pb-8 px-5 sm:px-8" role="contentinfo">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <a href="index.html" class="flex items-center gap-3 mb-4">
+          <div class="w-9 h-9 rounded flex items-center justify-center text-lg font-bold text-white" style="background:linear-gradient(135deg,#f59e0b,#d97706);">☪</div>
+          <div>
+            <div style="font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:.95rem;">Al-Rushd Institute</div>
+            <div style="font-size:.65rem;color:#6ee7b7;letter-spacing:.07em;font-weight:500;">OF QURANIC STUDIES</div>
+          </div>
+        </a>
+        <p style="color:#475569;font-size:.85rem;line-height:1.7;">Research-backed online Islamic education for Muslims worldwide.</p>
+        <div class="footer-social" style="display:flex;gap:.75rem;margin-top:1.25rem;">
+          <a href="https://instagram.com/alrushdonline" target="_blank" rel="noopener noreferrer" aria-label="Al-Rushd on Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://facebook.com/alrushdinstitute" target="_blank" rel="noopener noreferrer" aria-label="Al-Rushd on Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://tiktok.com/@alrushdinstitute" target="_blank" rel="noopener noreferrer" aria-label="Al-Rushd on TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:1rem;margin-bottom:1.2rem;">Navigation</h3>
+        <nav aria-label="Footer navigation"><ul style="list-style:none;display:flex;flex-direction:column;gap:.7rem;">
+          <li><a href="index.html"   style="color:#475569;font-size:.875rem;text-decoration:none;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='#475569'">→ Home</a></li>
+          <li><a href="about.html"   style="color:#475569;font-size:.875rem;text-decoration:none;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='#475569'">→ About Us</a></li>
+          <li><a href="pricing.html" style="color:#475569;font-size:.875rem;text-decoration:none;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='#475569'">→ Pricing</a></li>
+          <li><a href="contact.html" style="color:#475569;font-size:.875rem;text-decoration:none;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='#475569'">→ Contact</a></li>
+        </ul></nav>
+      </div>
+      <div>
+        <h3 style="font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:1rem;margin-bottom:1.2rem;">Get in Touch</h3>
+        <address style="font-style:normal;display:flex;flex-direction:column;gap:.9rem;">
+          <a href="https://wa.me/923494148001" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;">
+            <div style="width:32px;height:32px;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.25);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="13" height="13" fill="#25D366" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+            <span style="color:#64748b;font-size:.875rem;">+92 349 414 8001</span>
+          </a>
+          <a href="mailto:alrushdwalhidyah@gmail.com" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;">
+            <div style="width:32px;height:32px;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.2);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <span style="color:#64748b;font-size:.875rem;word-break:break-all;">alrushdwalhidyah@gmail.com</span>
+          </a>
+        </address>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem;">
+      <p style="color:#334155;font-size:.8rem;">© <span id="yr"></span> Al-Rushd Institute of Quranic Studies. All rights reserved.</p>
+      <p style="color:#1e293b;font-size:.75rem;">Designed for Muslim learners worldwide ❤</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/923494148001" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110" style="background:#25D366;box-shadow:0 6px 24px rgba(37,211,102,.5);" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" fill="white" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){ emailjs.init({ publicKey: 'vTh7odEC6kHi-eyYp' }); })();
+</script>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  /* Mobile Nav */
+  const burger=document.getElementById('burger'),mobNav=document.getElementById('mob-nav');
+  const b1=document.getElementById('b1'),b2=document.getElementById('b2'),b3=document.getElementById('b3');
+  let open=false;
+  burger.addEventListener('click',()=>{open=!open;mobNav.classList.toggle('hidden',!open);burger.setAttribute('aria-expanded',open);b1.style.transform=open?'rotate(45deg) translate(5px,5px)':'';b2.style.opacity=open?'0':'1';b3.style.transform=open?'rotate(-45deg) translate(5px,-5px)':'';});
+  mobNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{open=false;mobNav.classList.add('hidden');burger.setAttribute('aria-expanded','false');b1.style.transform='';b2.style.opacity='1';b3.style.transform='';}));
+
+  /* Scroll reveal */
+  const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('in');obs.unobserve(el.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+
+  /* Form submission via EmailJS */
+  document.getElementById('academy-booking-form').addEventListener('submit',function(e){
+    e.preventDefault();
+    const form=this;
+    const submitBtn=document.getElementById('submit-btn');
+    const successBanner=document.querySelector('[data-fs-success]');
+    const errorBanner=document.querySelector('[data-fs-error]');
+
+    const name=document.getElementById('f-name').value.trim();
+    const email=document.getElementById('f-email').value.trim();
+    const whatsapp=document.getElementById('f-whatsapp').value.trim();
+    const goals=document.getElementById('f-goals').value;
+
+    if(!name||!email||!goals){
+      alert('Please fill in all required fields before submitting.');
+      return;
+    }
+
+    submitBtn.disabled=true;
+    submitBtn.textContent='Sending Application...';
+
+    const templateParams={name,email,whatsapp:whatsapp||'Not provided',goals};
+
+    emailjs.send('service_qzcgogd','template_j1q9wqa',templateParams)
+      .then(function(){
+        form.classList.add('hidden');
+        successBanner.classList.remove('hidden');
+        if(errorBanner) errorBanner.classList.add('hidden');
+        form.reset();
+      },function(){
+        if(errorBanner){
+          errorBanner.textContent='⚠ Submission issue encountered. Please try again or reach out directly via WhatsApp.';
+          errorBanner.classList.remove('hidden');
+        } else {
+          alert('Submission issue. Please try again or contact us via WhatsApp.');
+        }
+        submitBtn.disabled=false;
+        submitBtn.textContent='✉ Send Enquiry';
+      });
+  });
+</script>
+</body>
+</html>
